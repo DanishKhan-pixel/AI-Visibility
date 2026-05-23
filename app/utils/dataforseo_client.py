@@ -10,6 +10,7 @@ import requests
 from flask import current_app
 
 
+
 @dataclass
 class KeywordMetrics:
     search_volume: int
@@ -99,7 +100,6 @@ def _extract_volume(data: dict[str, Any]) -> int | None:
         return None
     except Exception:
         return None
-
 
 def _mock_volume(query_text: str) -> int:
     """
