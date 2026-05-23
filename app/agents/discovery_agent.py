@@ -44,7 +44,6 @@ class QueryDiscoveryAgent(BaseAgent):
         queries_obj = parsed if isinstance(parsed, dict) else safe_json_parse(res.text)
         items = []
         if isinstance(queries_obj, dict) and isinstance(queries_obj.get("queries"), list):
-            print(isinstance,">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
             for it in queries_obj["queries"]:
                 if isinstance(it, dict) and isinstance(it.get("query_text"), str) and it["query_text"].strip():
                     items.append(DiscoveredQueryItem(query_text=it["query_text"].strip()))
