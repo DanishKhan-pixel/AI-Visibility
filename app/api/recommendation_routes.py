@@ -29,6 +29,7 @@ def list_recommendations(profile_uuid: str):
         .all()
     )
 
+
     data = [
         {
             "recommendation_uuid": r.id,

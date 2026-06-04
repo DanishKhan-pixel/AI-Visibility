@@ -3,7 +3,6 @@ from __future__ import annotations
 import os
 from urllib.parse import quote_plus
 
-
 def _build_database_url() -> str:
     """
     Priority:
@@ -43,7 +42,6 @@ class Config:
     DATAFORSEO_TIMEOUT_S = int(os.getenv("DATAFORSEO_TIMEOUT_S", "30"))
 
     LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")
-
 
 class TestConfig(Config):
     TESTING = True
